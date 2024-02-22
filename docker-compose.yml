@@ -1,4 +1,13 @@
 services:
+  api_gateway_nest:
+    build: ./http-api-gateway-nest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./http-api-gateway-nest/src:/usr/src/app/src
+    command: yarn start:dev
+    environment:
+      - PORT=3000
   nats:
     image: nats
     ports:
