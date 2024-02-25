@@ -3,7 +3,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { ClientProxy } from '@nestjs/microservices';
 import { Observable } from 'rxjs';
 @Controller()
-export class HelloController {
+export class HelloApiController {
   constructor(@Inject('NATS_SERVICE') private readonly client: ClientProxy) {}
   @ApiTags('Hello')
   @ApiOperation({ summary: 'Hello NATS' })

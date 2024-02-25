@@ -1,16 +1,16 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HelloController } from './hello.controller';
+import { HelloApiController } from './hello-api.controller';
 
 describe('AppController', () => {
-  let appController: HelloController;
+  let appController: HelloApiController;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
-      controllers: [HelloController],
+      controllers: [HelloApiController],
       providers: [],
     }).compile();
 
-    appController = app.get<HelloController>(HelloController);
+    appController = app.get<HelloApiController>(HelloApiController);
   });
 
   describe('root', () => {

@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { NatsClientModule } from '../nats-client/nats.module';
-import { HelloController } from './hello.controller';
+import { HelloApiController } from './hello-api.controller';
 
 @Module({
   imports: [NatsClientModule],
-  controllers: [HelloController],
+  controllers: [HelloApiController],
   providers: [],
   exports: [],
 })
-export class HelloModule {}
+export class HelloApiModule {}
