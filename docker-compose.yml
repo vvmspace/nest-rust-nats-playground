@@ -8,11 +8,17 @@ services:
     command: yarn start:dev
     environment:
       - PORT=3000
+    restart: always
   hello_nest_microservice:
     build: ./hello-nest-microservice
     volumes:
       - ./hello-nest-microservice/src:/usr/src/app/src
     command: yarn start:dev
+  hello_rust_microservice:
+    build: ./hello-rust-microservice
+    volumes:
+      - ./hello-rust-microservice:/app
+    command: sh -c "cargo watch -x run"
   nats:
     image: nats
     ports:
