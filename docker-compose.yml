@@ -8,6 +8,11 @@ services:
     command: yarn start:dev
     environment:
       - PORT=3000
+  hello_nest_microservice:
+    build: ./hello-nest-microservice
+    volumes:
+      - ./hello-nest-microservice/src:/usr/src/app/src
+    command: yarn start:dev
   nats:
     image: nats
     ports:
