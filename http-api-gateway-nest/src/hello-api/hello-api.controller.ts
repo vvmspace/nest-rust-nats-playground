@@ -24,4 +24,11 @@ export class HelloApiController {
   postHelloRust(@Body() body: any = {}): Observable<string> {
     return this.client.send<string>('hello-rust', body);
   }
+
+  @ApiOperation({ summary: 'Hello Python (POST)' })
+  @ApiBody({})
+  @Post('python')
+  postHelloPython(@Body() body: any = {}): Observable<string> {
+    return this.client.send<string>('hello-python', body);
+  }
 }
