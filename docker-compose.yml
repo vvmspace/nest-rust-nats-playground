@@ -19,6 +19,11 @@ services:
     volumes:
       - ./hello-rust-microservice:/app
     command: sh -c "cargo watch -x run"
+  hello_python_microservice:
+    build: ./hello-python-microservice
+    volumes:
+      - ./hello-python-microservice:/app
+    command: watchmedo auto-restart --directory=./ --pattern=*.py --recursive -- python src/main.py
   nats:
     image: nats
     ports:
