@@ -12,4 +12,5 @@ docker-compose up --build
 - `http-api-gatewat-nest`: NestJS HTTP API Gateway
 - `hello-nest-microservice`: NestJS Microservice
 - `hello-rust-microservice`: Rust Microservice
+- `hello-python-microservice`: Python Microservice
 - `docker-compose.yml`: Docker Compose file to run the project
