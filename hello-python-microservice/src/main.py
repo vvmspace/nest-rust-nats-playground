@@ -20,7 +20,7 @@ async def main():
     sub = await nc.subscribe("hello-python", cb=help_request)
 
     while True:
-        await asyncio.sleep(3600)  # Sleep
+        await asyncio.sleep(1) # Infinite loop to keep the program running
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
